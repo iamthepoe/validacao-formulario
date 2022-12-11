@@ -12,6 +12,10 @@ import isNotEmpty from './isNotEmpty';
 
 form.addEventListener('submit', function(event){
 	let success = true;
+	ErrorMessages.forEach(message=>{
+		message.style.display = 'none';
+	});
+
 	if(!isNotEmpty([emailInput, userInput, passwordInput, confirmInput])){
 		alert('Todos os campos precisam estar preenchidos!');
 		success = false;

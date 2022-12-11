@@ -25,6 +25,9 @@ const isValidPassword_1 = __importDefault(__webpack_require__(/*! ./isValidPassw
 const isNotEmpty_1 = __importDefault(__webpack_require__(/*! ./isNotEmpty */ "./src/isNotEmpty.ts"));
 form.addEventListener('submit', function (event) {
     let success = true;
+    ErrorMessages.forEach(message => {
+        message.style.display = 'none';
+    });
     if (!(0, isNotEmpty_1.default)([emailInput, userInput, passwordInput, confirmInput])) {
         alert('Todos os campos precisam estar preenchidos!');
         success = false;
