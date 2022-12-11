@@ -35,7 +35,9 @@ form.addEventListener('submit', function(event){
 
 	if(success){
 		alert('Você foi cadastrado com sucesso.');
+	}else{
+		event.preventDefault();
 	}
 
-	event.preventDefault();
+
 });
