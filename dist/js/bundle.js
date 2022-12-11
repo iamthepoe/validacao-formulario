@@ -46,7 +46,9 @@ form.addEventListener('submit', function (event) {
     if (success) {
         alert('Você foi cadastrado com sucesso.');
     }
-    event.preventDefault();
+    else {
+        event.preventDefault();
+    }
 });
 
 
